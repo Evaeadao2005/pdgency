@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDgency - Artes para Empresas</title>
+    
+    <!-- Link para o Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        /* Reset de margens e preenchimentos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #FF8A00; /* Laranja Viva */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            max-width: 120px;
+        }
+        header h1 {
+            font-size: 2em;
+            margin: 10px 0;
+        }
+
+        /* Seção Principal */
+        .main-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #fff;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .main-section h2 {
+            color: #FF8A00; /* Laranja Viva */
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        .main-section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .discount {
+            background-color: #FF8A00; /* Laranja Viva */
+            color: #fff;
+            padding: 15px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            width: 80%;
+            cursor: pointer;
+        }
+        .discount:hover {
+            background-color: #FF7000; /* Laranja mais escuro */
+        }
+
+        /* Galeria de Portfólio */
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .portfolio img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .portfolio img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Botão para WhatsApp */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366; /* Cor oficial do WhatsApp */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .whatsapp-icon {
+            font-size: 35px;
+            color: white;
+        }
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+            .main-section h2 {
+                font-size: 1.5em;
+            }
+            .discount {
+                font-size: 1em;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://i.imgur.com/vmFZSFU.png" alt="Logo do Profissional">
+        <h1>PDgency - Artes para Empresas</h1>
+    </header>
+
+    <section class="main-section">
+        <div class="discount" onclick="openDiscount()">
+            50% de Desconto na Primeira Arte!
+        </div>
+        <h2>Projetos Recentes</h2>
+        <p>Trabalhamos com dedicação para entregar designs modernos e eficazes, ajudando a destacar sua marca no mercado.</p>
+        <div class="portfolio">
+            <img src="portfolio1.jpg" alt="Projeto 1">
+            <img src="portfolio2.jpg" alt="Projeto 2">
+            <img src="portfolio3.jpg" alt="Projeto 3">
+            <img src="portfolio4.jpg" alt="Projeto 4">
+        </div>
+    </section>
+
+    <!-- Botão WhatsApp -->
+    <div class="whatsapp-button" onclick="openWhatsApp()">
+        <i class="fab fa-whatsapp whatsapp-icon"></i>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 PDgency. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function openWhatsApp() {
+            window.open('https://wa.me/SEUNUMEROTELEFONE', '_blank');
+        }
+        function openDiscount() {
+            alert("Aproveite o desconto! Entre em contato agora!");
+        }
+    </script>
+
+</body>
+</html>
